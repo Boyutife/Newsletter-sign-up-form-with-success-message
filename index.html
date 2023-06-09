@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body class="flex flex-col  items-center min-h-screen  justify-center md:bg-DarkSlateGrey">
+
+  <!-- Sign-up form start -->
+
+  <main id="main"
+    class="flex flex-col items-center justify-between  bg-white md:w-1/2  md:flex-row-reverse md:rounded-xl md:p-4">
+    <div class="img-container  md:hidden">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="w-screen">
+    </div>
+    <div class="hidden img-container w-1/2 md:block ">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="img">
+    </div>
+    <form id="Subscriber-form" class="flex flex-col justify-start px-8 py-4">
+      <h1 class="text-DarkSlateGrey text-3xl font-bold">Stay updated!</h1>
+      <h2 class="my-4">Join 60,000+ product managers receiving monthly updates on:</h2>
+      <ul class="flex flex-col space-y-4 my-8 md:my-4">
+        <li class="flex items-start space-x-2">
+          <img src="./assets/images/icon-list.svg" alt="list icon-list">
+          <p>Product discovery and building what matters</p>
+        </li>
+        <li class="flex items-start space-x-2">
+          <img src="./assets/images/icon-list.svg" alt="list icon-list">
+          <p>Measuring to ensure updates are a success</p>
+        </li>
+        <li class="flex items-start  space-x-2">
+          <img src="./assets/images/icon-list.svg" alt="list icon-list">
+          <p>And much more!</p>
+        </li>
+      </ul>
+
+      <div class="flex flex-col my-4">
+        <div class="flex justify-between px-1">
+          <label for="email-input" class="text-sm font-bold"> Email address</label>
+          <p id="error-msg" class="text-Tomato text-sm "></p>
+        </div>
+        <input type="email" id="email-input" name="email-input" placeholder="email@company.com"
+          class="border p-4 rounded-lg">
+      </div>
+
+      <button id="btn" type="submit" onclick="validateAndSubmit(event)"
+        class="border p-4 rounded-lg bg-CharcoalGrey text-white items-center w-full hover:bg-Tomato">
+        Subscribe to monthly newsletter
+      </button>
+    </form>
+
+  </main>
+  <!-- Sign-up form end -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
